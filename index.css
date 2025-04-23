@@ -62,13 +62,13 @@ footer {
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* ⬅ Alinea todo a la izquierda */
   gap: 1rem;
-  flex-wrap: wrap;
+  padding: 0 1rem;
 }
 
 .logo {
-  height: 50px;
+  height: 35px;  /* 🔽 Más pequeño */
   width: auto;
 }
 
