@@ -31,23 +31,26 @@ h1 {
 }
 
 .iframe-wrapper {
-  position: relative;
   width: 100%;
-  padding-top: 75%; /* Proporción 4:3 */
+  height: 600px; /* Altura fija para pantallas grandes */
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .iframe-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   border: solid 1px #777;
   border-radius: 4px;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .iframe-wrapper {
+    height: 80vh; /* Usa 80% de la altura de la pantalla */
+  }
 }
 
 footer {
