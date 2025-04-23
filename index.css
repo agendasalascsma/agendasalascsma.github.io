@@ -8,6 +8,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  justify-content: center; /* Aseguramos que el contenido esté centrado verticalmente */
 }
 
 /* Estilo del encabezado */
@@ -34,13 +35,15 @@ h1 {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Flex para asegurar que el iframe se estire bien */
+  justify-content: center;
 }
 
 /* Hacer que el iframe sea responsivo con mayor altura en pantallas grandes */
 .responsive-iframe {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* Relación de aspecto 16:9, ajustada para mayor altura */
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
   height: 0;
   overflow: hidden;
 }
@@ -59,6 +62,13 @@ h1 {
 @media (min-width: 1200px) {
   .responsive-iframe {
     padding-bottom: 50%; /* Relación de aspecto ajustada para pantallas grandes */
+  }
+}
+
+/* Solución para mejorar la visibilidad en Edge */
+@media screen and (min-width: 1024px) {
+  .calendar-container {
+    max-width: 100%; /* Evitar que quede limitado en pantallas grandes */
   }
 }
 
