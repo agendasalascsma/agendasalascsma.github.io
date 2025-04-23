@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  justify-content: flex-start; /* Aseguramos que todo esté alineado hacia arriba */
+  height: 100%; /* Aseguramos que el body ocupe toda la altura */
 }
 
 /* Estilo del encabezado */
@@ -31,23 +31,21 @@ h1 {
 /* Contenedor del calendario */
 .calendar-container {
   width: 100%;
-  height: 80vh; /* Ocupa el 80% de la altura de la pantalla */
-  padding: 0;
-  background: white;
-  display: flex; /* Aseguramos que el iframe se estire bien */
+  flex-grow: 1; /* Ocupa el espacio restante */
+  display: flex;
   justify-content: center;
   align-items: center; /* Centrado vertical */
+  padding: 0;
+  background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  overflow: hidden; /* Aseguramos que no haya scroll */
 }
 
-/* Hacer que el iframe sea responsivo con mayor altura en pantallas grandes */
+/* Hacer que el iframe sea responsivo */
 .responsive-iframe {
   position: relative;
   width: 100%;
-  height: 100%; /* Lo hacemos llenar todo el contenedor */
-  padding-bottom: 0;
-  overflow: hidden;
+  height: 100%;
 }
 
 .responsive-iframe iframe {
