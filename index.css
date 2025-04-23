@@ -9,7 +9,7 @@ html, body {
   background-color: #f4f4f4;
   color: #333;
   height: 100%;
-  overflow: hidden; /* 🔒 Bloquea cualquier scroll */
+  overflow: hidden;
 }
 
 body {
@@ -33,7 +33,7 @@ h1 {
 }
 
 .calendar-container {
-  flex-grow: 1; /* ⚙️ Ocupará todo el espacio vertical restante */
+  flex-grow: 1;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -61,14 +61,12 @@ footer {
 
 .header-content {
   display: flex;
-  align-items: center;     /* Alinea verticalmente */
-  gap: 1rem;               /* Espacio entre imagen y texto */
+  align-items: center;
+  gap: 1rem;
   padding: 1rem;
 }
 
-
 .logo {
-  height: 35px;  /* 🔽 Más pequeño */
+  height: 35px;
   width: auto;
 }
-
