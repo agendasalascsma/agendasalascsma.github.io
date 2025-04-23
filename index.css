@@ -61,9 +61,11 @@ footer {
 
 .header-content {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  align-items: center;     /* Centrado vertical en la línea */
+  justify-content: center; /* Centrado horizontal del grupo completo */
+  gap: 1rem;               /* Espacio entre logo y título */
   padding: 1rem;
+  text-align: center;
 }
 
 .logo {
