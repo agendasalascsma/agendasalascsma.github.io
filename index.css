@@ -59,19 +59,17 @@ footer {
   background-color: #f9f9f9;
 }
 
-/*.header-content {
+.header-content {
   display: flex;
-  align-items: center;
-  justify-content: flex-start; /* ⬅ Alinea todo a la izquierda 
-  gap: 1rem;
-  padding: 0 1rem;
+  align-items: center;     /* Alinea verticalmente */
+  gap: 1rem;               /* Espacio entre imagen y texto */
+  padding: 1rem;
 }
-*/
+}
+
 
 .logo {
   height: 50px;  /* 🔽 Más pequeño */
   width: auto;
-  align-items: stretch ;
-  justify-content: flex-start; /* ⬅ Alinea todo a la izquierda 
 }
 
