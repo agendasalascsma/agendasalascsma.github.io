@@ -36,11 +36,11 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Hacer que el iframe sea responsivo */
+/* Hacer que el iframe sea responsivo con mayor altura en pantallas grandes */
 .responsive-iframe {
   position: relative;
   width: 100%;
-  padding-bottom: 75%; /* Relación de aspecto 4:3 */
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9, ajustada para mayor altura */
   height: 0;
   overflow: hidden;
 }
@@ -53,6 +53,13 @@ h1 {
   height: 100%;
   border: none;
   border-radius: 8px;
+}
+
+/* Para pantallas más grandes, usar vh para mejorar la altura */
+@media (min-width: 1200px) {
+  .responsive-iframe {
+    padding-bottom: 50%; /* Relación de aspecto ajustada para pantallas grandes */
+  }
 }
 
 /* Estilo del pie de página */
