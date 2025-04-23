@@ -29,22 +29,22 @@ h1 {
 /* Contenedor del calendario */
 .calendar-container {
   width: 100%;
-  max-width: 1000px;
-  margin: 2rem auto;
+  height: 100vh; /* Usamos toda la altura de la pantalla */
+  padding: 0;
   background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex; /* Flex para asegurar que el iframe se estire bien */
+  display: flex; /* Aseguramos que el iframe se estire bien */
   justify-content: center;
+  align-items: center; /* Centrado vertical */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 /* Hacer que el iframe sea responsivo con mayor altura en pantallas grandes */
 .responsive-iframe {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-  height: 0;
+  height: 80%; /* Usamos un porcentaje de la altura de la pantalla */
+  padding-bottom: 0; /* Eliminamos la relación de aspecto para usar altura personalizada */
   overflow: hidden;
 }
 
@@ -58,17 +58,17 @@ h1 {
   border-radius: 8px;
 }
 
-/* Para pantallas más grandes, usar vh para mejorar la altura */
-@media (min-width: 1200px) {
-  .responsive-iframe {
-    padding-bottom: 50%; /* Relación de aspecto ajustada para pantallas grandes */
+/* Solución para mejorar la visibilidad en Edge y otros navegadores */
+@media (min-width: 1024px) {
+  .calendar-container {
+    width: 100%;
+    max-width: none; /* Aseguramos que no haya límite de ancho */
   }
 }
 
-/* Solución para mejorar la visibilidad en Edge */
-@media screen and (min-width: 1024px) {
-  .calendar-container {
-    max-width: 100%; /* Evitar que quede limitado en pantallas grandes */
+@media (min-width: 1200px) {
+  .responsive-iframe {
+    height: 80%; /* Se ajusta el iframe para pantallas grandes */
   }
 }
 
