@@ -59,13 +59,14 @@ footer {
   background-color: #f9f9f9;
 }
 
-.header-content {
+/*.header-content {
   display: flex;
   align-items: center;
-  /*justify-content: flex-start; /* ⬅ Alinea todo a la izquierda */
+  justify-content: flex-start; /* ⬅ Alinea todo a la izquierda 
   gap: 1rem;
   padding: 0 1rem;
 }
+*/
 
 .logo {
   height: 35px;  /* 🔽 Más pequeño */
