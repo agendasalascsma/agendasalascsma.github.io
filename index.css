@@ -58,3 +58,17 @@ footer {
   text-align: center;
   background-color: #f9f9f9;
 }
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
