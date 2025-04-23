@@ -25,7 +25,7 @@ h1 {
 
 .calendar-container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1000px; /* Podés aumentar este valor */
   padding: 1rem;
   box-sizing: border-box;
 }
