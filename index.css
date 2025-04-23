@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  justify-content: center; /* Aseguramos que el contenido esté centrado verticalmente */
+  justify-content: flex-start; /* Aseguramos que todo esté alineado hacia arriba */
 }
 
 /* Estilo del encabezado */
@@ -19,8 +19,10 @@ header {
   padding: 1rem 0;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0; /* Eliminamos márgenes */
 }
 
+/* Título dentro del encabezado */
 h1 {
   margin: 0;
   font-size: 1.8rem;
@@ -29,7 +31,7 @@ h1 {
 /* Contenedor del calendario */
 .calendar-container {
   width: 100%;
-  height: 100vh; /* Usamos toda la altura de la pantalla */
+  height: 80vh; /* Ocupa el 80% de la altura de la pantalla */
   padding: 0;
   background: white;
   display: flex; /* Aseguramos que el iframe se estire bien */
@@ -43,8 +45,8 @@ h1 {
 .responsive-iframe {
   position: relative;
   width: 100%;
-  height: 90%; /* Usamos un porcentaje de la altura de la pantalla */
-  padding-bottom: 0; /* Eliminamos la relación de aspecto para usar altura personalizada */
+  height: 100%; /* Lo hacemos llenar todo el contenedor */
+  padding-bottom: 0;
   overflow: hidden;
 }
 
@@ -56,20 +58,6 @@ h1 {
   height: 100%;
   border: none;
   border-radius: 8px;
-}
-
-/* Solución para mejorar la visibilidad en Edge y otros navegadores */
-@media (min-width: 1024px) {
-  .calendar-container {
-    width: 100%;
-    max-width: none; /* Aseguramos que no haya límite de ancho */
-  }
-}
-
-@media (min-width: 1200px) {
-  .responsive-iframe {
-    height: 80%; /* Se ajusta el iframe para pantallas grandes */
-  }
 }
 
 /* Estilo del pie de página */
