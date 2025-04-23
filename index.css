@@ -61,11 +61,13 @@ footer {
 
 .header-content {
   display: flex;
-  align-items: center;     /* Centrado vertical en la línea */
-  justify-content: center; /* Centrado horizontal del grupo completo */
-  gap: 1rem;               /* Espacio entre logo y título */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   padding: 1rem;
   text-align: center;
+  margin: 0 auto;           /* 🔥 Esto centra el div dentro del header */
+  width: fit-content;       /* ⚙️ Ajusta el ancho al contenido */
 }
 
 .logo {
